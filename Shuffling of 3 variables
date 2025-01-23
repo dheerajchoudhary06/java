@@ -1,0 +1,25 @@
+import java.util.Random;
+
+public class ShuffleVariables {
+    public static void main(String[] args) {
+        int a = 1, b = 2, c = 3;
+        
+        Random rand = new Random();
+        
+       
+        int temp = a;
+        int[] arr = {a, b, c};
+        for (int i = 0; i < arr.length; i++) {
+            int randomIndex = rand.nextInt(arr.length);
+            int tempVal = arr[i];
+            arr[i] = arr[randomIndex];
+            arr[randomIndex] = tempVal;
+        }
+
+        a = arr[0];
+        b = arr[1];
+        c = arr[2];
+     
+        System.out.println("Shuffled values: a = " + a + ", b = " + b + ", c = " + c);
+    }
+}
