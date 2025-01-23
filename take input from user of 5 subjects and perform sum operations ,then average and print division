@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class StudentDivision {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int S1, S2, S3, S4, S5;
+        
+        System.out.print("Enter marks for Subject 1 (S1): ");
+        S1 = scanner.nextInt();
+        System.out.print("Enter marks for Subject 2 (S2): ");
+        S2 = scanner.nextInt();
+        System.out.print("Enter marks for Subject 3 (S3): ");
+        S3 = scanner.nextInt();
+        System.out.print("Enter marks for Subject 4 (S4): ");
+        S4 = scanner.nextInt();
+        System.out.print("Enter marks for Subject 5 (S5): ");
+        S5 = scanner.nextInt();
+        
+        int sum = S1 + S2 + S3 + S4 + S5;
+        double avg = sum / 5.0;
+        
+        if (avg >= 40 && avg < 60) {
+            System.out.println("Division: 3rd Division");
+        } else if (avg >= 60 && avg < 75) {
+            System.out.println("Division: 2nd Division");
+        } else if (avg >= 75 && avg <= 100) {
+            System.out.println("Division: 1st Division");
+        } else {
+            System.out.println("False");
+        }
+        
+        scanner.close();
+    }
+}
